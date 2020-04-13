@@ -1,6 +1,6 @@
 const covid19ImpactEstimator = (data) => data;
-
-var data ={
+export default covid19ImpactEstimator;
+let data ={
 "region": {
 "name": "Africa",
 "avgAge": 19.7,
@@ -30,7 +30,7 @@ function infectionsByRequestedTimeSevereImpact(myData) {
 }
 
 function returnFinalData(anyData){
-var finalData ={
+let finalData ={
 "data":anyData,
 "estimates":{
 "currentlyInfected":{
@@ -52,4 +52,4 @@ return finalData;
 
 console.log(currentlyInfected(data))
 console.log(returnFinalData(data))
-// export default covid19ImpactEstimator;
+

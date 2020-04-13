@@ -1,17 +1,17 @@
 const covid19ImpactEstimator = (data) => data;
-export default covid19ImpactEstimator;
-const data = {
-"region": {
-"name": "Africa",
-"avgAge": 19.7,
-"avgDailyIncomeInUSD": 5,
-"avgDailyIncomePopulation": 0.71
+module.exports = covid19ImpactEstimator;
+const info = {
+region: {
+name: "Africa",
+avgAge: 19.7,
+avgDailyIncomeInUSD: 5,
+avgDailyIncomePopulation: 0.71
 },
-"periodType": "days",
-"timeToElapse": 58,
-"reportedCases": 674,
-"population": 66622705,
-"totalHospitalBeds": 1380614
+periodType: "days",
+timeToElapse: 58,
+reportedCases: 674,
+population: 66622705,
+totalHospitalBeds: 1380614
 };
 
 function currentlyInfected(myData){
@@ -50,6 +50,6 @@ let finalData = {
 return finalData;
 }
 
-console.log(returnFinalData(data))
-console.log(returnFinalData(data))
+console.log(returnFinalData(info))
+console.log(returnFinalData(info))
 

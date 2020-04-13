@@ -6,7 +6,8 @@
   "private": false,
   "scripts": {
     "lint": "eslint ./src/"
-  },
+    },
+
   "dependencies": {
     "on-covid-19": "^0.1.3"
   },

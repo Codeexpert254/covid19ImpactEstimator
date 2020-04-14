@@ -15,10 +15,12 @@ const info = {
 };
 
 function currentlyInfected(myData) {
-    return (impact_currentlyAffected = myData['reportedCases']) * 10;
+  let impact_currentlyAffected;
+  return (impact_currentlyAffected = myData['reportedCases']) * 10;
 }
-function currentlyInfectedsevereImpact(myData) {
-    return (severImpact_currentlyInfected = myData['reportedCases']) * 50;
+function currentlyInfectedSevereImpact(myData) {
+  let severImpact_currentlyInfected;
+  return (severImpact_currentlyInfected = myData['reportedCases']) * 50;
 }
 
 function infectionsByRequestedTimeCurrentlyInfected(myData) {
@@ -26,7 +28,7 @@ function infectionsByRequestedTimeCurrentlyInfected(myData) {
 }
 
 function infectionsByRequestedTimeSevereImpact(myData) {
-    return (currentlyInfectedsevereImpact(myData)* (2 ** 9))
+    return (currentlyInfectedSevereImpact(myData)* (2 ** 9))
 }
 
 
@@ -38,7 +40,7 @@ let FinalData = {
 'currentlyInfected': currentlyInfected(anyData)
             },
             'severeImpactCurrentlyInfected' : {
-                'severeImpactCurrentlyInfected' : currentlyInfectedsevereImpact(anyData)
+                'severeImpactCurrentlyInfected' : currentlyInfectedSevereImpact(anyData)
             },
             'infectionsByRequestedTimeCurrentlyInfected' : {
                 'infectionsByRequestedTimeCurrentlyInfected' : infectionsByRequestedTimeCurrentlyInfected(anyData)
@@ -51,6 +53,6 @@ let FinalData = {
 return FinalData ;
 }
 
-console.log(returnFinalData(info));
+
 console.log(returnFinalData(info));
 
